@@ -14,7 +14,7 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 public class ProductPageTest extends BasePage {
 
     @Test
-    public void productsShouldContainImageTitleAndCheckBox() {
+    public void eachProductsShouldContainImageTitleAndCheckbox() {
         open(productUrl);
         ElementsCollection productsList = $$("div[class='container']");
         productsList.shouldHaveSize(8);
@@ -26,7 +26,7 @@ public class ProductPageTest extends BasePage {
     }
 
     @Test
-    public void checkCheckBoxes() {
+    public void verifyCheckboxes() {
         open(productUrl);
         $(By.xpath("//span[contains(text(),'Selected:')]//following-sibling::span ")).text().equals(0);
         ElementsCollection productsList = $$("div[class='container']");
@@ -72,7 +72,7 @@ public class ProductPageTest extends BasePage {
     }
 
     @Test
-    public void userCanOpenBestAndNewProductOnProductPage() {
+    public void userCanOpenBestAndNewProductPages() {
         open(productUrl);
 
         $(byText("Best products")).shouldBe();

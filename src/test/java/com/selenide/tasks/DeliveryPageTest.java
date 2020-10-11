@@ -32,7 +32,7 @@ public class DeliveryPageTest extends BasePage {
     }
 
     @Test
-    public void userCanOpenBestAndNewProductPages() {
+    public void userCanOpenBestAndNewProductFromDeliveryPage() {
         open(deliveryUrl);
 
         $(byText("Best products")).shouldBe();

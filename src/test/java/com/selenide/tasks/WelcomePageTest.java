@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class WelcomePageTest extends BasePage {
 
     @Test
-    public void userCanOpenTaskPageWelcomePage() {
+    public void userCanOpenTaskPageFromWelcomePage() {
         open(welcomeUrl);
         $(byXpath("//a[contains(text(), 'Products')]")).shouldBe();
         $(byXpath("//a[contains(text(), 'About')]")).shouldBe();
